@@ -30,8 +30,11 @@ def get_message(content):
 			# print(e)
 			pass
 		finally:
+			next_line = content.find("\n")
+			if next_line == -1:
+				break
 			# Go to next line
-			content = content[content.find("\n") + 1:]
+			content = content[next_line + 1:]
 			#print(name, date, time)
 			
 
